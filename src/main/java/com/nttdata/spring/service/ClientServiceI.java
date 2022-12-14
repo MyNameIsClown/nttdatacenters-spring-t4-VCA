@@ -17,17 +17,14 @@ public interface ClientServiceI {
 	 * @param apellidos
 	 * @return
 	 */
-	public Client findByNombreCompleto(String nombre, String apellidos);
+	public List<Client> findClientByNombreCompleto(String nombre, String apellidos);
 	
 	/**
-	 * Añade un cliente a la bbdd
+	 * Add client
 	 * 
-	 * @param nombre
-	 * @param apellidos
-	 * @param dni
-	 * @param fechaNacimiento
+	 * @param client
 	 */
-	public void addClient(String nombre, String apellidos, String dni, Date fechaNacimiento);
+	public void addClient(Client client);
 	
 	/**
 	 * Lista todos los clientes
@@ -35,4 +32,14 @@ public interface ClientServiceI {
 	 * @return
 	 */
 	public List<Client> findAll();
+	
+	/**
+	 * Add client
+	 * 
+	 * @param string
+	 * @param string2
+	 * @param string3
+	 * @param valueOf
+	 */
+	public void addClient(String nombre, String apellidos, String dni, Date fechaDeNacimiento);
 }

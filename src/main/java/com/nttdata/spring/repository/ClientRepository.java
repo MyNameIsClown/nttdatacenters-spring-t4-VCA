@@ -1,5 +1,7 @@
 package com.nttdata.spring.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -18,5 +20,5 @@ public interface ClientRepository extends JpaRepository<Client, Integer>{
 	 * @param apellidos
 	 * @return
 	 */
-	public Client findClientDistinctByNombreAndApellidos(String nombre, String apellidos);
+	public List<Client> findByNombreAndApellidos(String nombre, String apellidos);
 }

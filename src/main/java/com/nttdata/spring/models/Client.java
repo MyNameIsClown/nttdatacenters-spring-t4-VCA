@@ -123,7 +123,10 @@ public class Client implements Serializable{
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
-
+	
+	/**
+	 * To string
+	 */
 	@Override
 	public String toString() {
 		return "Client \n\t[id=" + id + ", \n\tnombre=" + nombre + ", \n\tapellidos=" + apellidos + ", \n\tfechaDeNacimiento="
